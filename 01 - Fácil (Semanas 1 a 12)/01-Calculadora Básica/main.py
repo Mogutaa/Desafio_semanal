@@ -13,10 +13,12 @@ def divisao (a,b):
     else:
         return a/b
 
+operacoes = {"+":soma, "-":subtracao, "*":multiplicacao, "/":divisao}
+
 while True:
 
-    operacao = input("Digite a operacao desejada: +, -, *, /")
-    if operacao not in ["+","-","*","/"]:
+    operacao = input("Digite a operacao desejada: \n+ \n- \n* \n/ \n")
+    if operacao not in operacoes:
         print("Operação inválida")
         continue
 
@@ -27,16 +29,8 @@ while True:
         print("Erro: Digite números válidos!")
         continue
 
-    if operacao == "+":
-        resultado = soma(num1,num2)
-    elif operacao == "-":
-        resultado = subtracao(num1,num2)
-    elif operacao == "*":
-        resultado = multiplicacao(num1,num2)
-    elif operacao == "/":
-        resultado = divisao(num1,num2)  
-    else:
-        print("Operação inválida")  
+    func = operacoes[operacao]
+    resultado = func(num1, num2)  
 
     print("O resultado é: ", resultado)
 
