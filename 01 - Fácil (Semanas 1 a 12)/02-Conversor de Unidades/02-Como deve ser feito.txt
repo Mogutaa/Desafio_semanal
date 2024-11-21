@@ -1,0 +1,84 @@
+02 - Conversor de Unidades
+Objetivo do Projeto
+O objetivo desse projeto é criar um conversor que permita ao usuário converter valores entre diferentes unidades de medida. Por exemplo, converter metros para quilômetros, litros para mililitros, ou Celsius para Fahrenheit. O projeto deve ser simples e focado em interatividade com o usuário.
+
+Especificações do Projeto
+Funcionalidades:
+
+O programa deve permitir a conversão entre pelo menos três tipos de unidades diferentes (ex.: comprimento, temperatura e volume).
+O usuário escolhe o tipo de conversão (ex.: metros para quilômetros ou Celsius para Fahrenheit) e insere o valor a ser convertido.
+O programa então exibe o valor convertido de forma clara e objetiva.
+O usuário deve ser capaz de realizar várias conversões durante a execução do programa.
+Tipos de Conversão:
+
+Comprimento: metros (m) para quilômetros (km), centímetros (cm), milímetros (mm).
+Temperatura: Celsius (°C) para Fahrenheit (°F) e Kelvin (K).
+Volume: litros (L) para mililitros (mL) e galões (gal).
+Entrada do Usuário:
+
+O usuário escolhe a conversão desejada (por exemplo, metros para quilômetros).
+O usuário insere o valor a ser convertido.
+Saída:
+
+O programa exibe o valor convertido com uma explicação clara (ex.: "5 metros equivalem a 0,005 quilômetros").
+Estrutura do Projeto
+Menu de Seleção:
+
+O usuário deve ser apresentado com um menu para escolher o tipo de conversão que deseja realizar (comprimento, temperatura, volume).
+Após a seleção, o programa apresenta outra lista com as unidades disponíveis para conversão.
+Funções para Conversão:
+
+Cada tipo de conversão deve ser realizado por uma função separada. Por exemplo:
+Uma função para conversão de metros para quilômetros, centímetros, etc.
+Uma função para conversão de Celsius para Fahrenheit e Kelvin.
+Uma função para conversão de litros para mililitros, galões, etc.
+Função Principal:
+
+A função principal organiza o fluxo do programa. Ela solicita a entrada do usuário, chama a função de conversão correta com base na escolha do usuário e exibe o resultado.
+Validação de Entrada:
+
+O programa deve validar se a entrada do usuário é numérica e se a operação solicitada é válida (ex.: verificar se o valor de entrada é positivo ou se a unidade de medida escolhida é válida).
+Se o usuário inserir um valor ou uma opção inválida, o programa deve exibir uma mensagem de erro e permitir que ele tente novamente.
+Interação Contínua:
+
+Após a conversão, o programa deve perguntar ao usuário se ele deseja fazer outra conversão ou encerrar o programa.
+Passos para Implementação
+Criar o Menu de Seleção:
+
+Exiba um menu de opções para o usuário escolher o tipo de conversão (comprimento, temperatura, volume).
+Use uma estrutura while para permitir que o usuário continue fazendo conversões sem precisar reiniciar o programa.
+Implementar as Funções de Conversão:
+
+Para cada categoria (comprimento, temperatura, volume), crie uma função para realizar a conversão. Por exemplo:
+Conversão de Comprimento: Crie funções como metros_para_quilometros(), centimetros_para_metros(), etc.
+Conversão de Temperatura: Crie funções como celsius_para_fahrenheit(), fahrenheit_para_kelvin(), etc.
+Conversão de Volume: Crie funções como litros_para_mililitros(), galao_para_litros(), etc.
+Receber a Entrada do Usuário:
+
+Após o usuário selecionar a conversão desejada, peça para ele inserir o valor a ser convertido.
+Valide se o valor inserido é numérico e positivo. Caso contrário, exiba uma mensagem de erro e peça a entrada novamente.
+Exibir o Resultado:
+
+Após a conversão, mostre o valor convertido e explique o que foi feito (ex.: "10 metros são 0,01 quilômetros").
+Permita que o usuário escolha se deseja realizar outra conversão ou sair do programa.
+Aprendizados e Conceitos Chave
+Funções:
+
+O uso de funções torna o código modular, organizado e fácil de entender.
+A prática de criar funções para diferentes categorias de conversão ajudará a reforçar a compreensão sobre como dividir problemas grandes em partes menores.
+Controle de Fluxo:
+
+A utilização de condicionais (if, elif, else) para determinar qual conversão realizar.
+O uso de laços (while) para permitir que o usuário faça múltiplas conversões sem sair do programa.
+Validação de Entrada:
+
+Validação de entradas numéricas e de opções de menu, utilizando funções como isnumeric() para garantir que o usuário forneça valores válidos.
+Como lidar com entradas inválidas e exibir mensagens de erro amigáveis.
+Lógica de Cálculos:
+
+Compreender como as unidades de medida se relacionam e como realizar conversões entre elas de forma precisa (ex.: 1 metro = 100 centímetros).
+Desenvolver um raciocínio lógico para entender e aplicar fórmulas de conversão entre unidades.
+Extensões e Melhorias
+Adicionar Mais Tipos de Conversão: Você pode adicionar mais categorias de conversão, como conversão de peso (gramas para quilogramas, libras para onças), área (metros quadrados para quilômetros quadrados), etc.
+Interface Gráfica (GUI): Criar uma interface gráfica simples usando o Tkinter, onde o usuário pode selecionar opções de conversão a partir de botões e caixas de entrada.
+Histórico de Conversões: Adicionar a funcionalidade de salvar e exibir um histórico das conversões realizadas durante a execução do programa.

@@ -1,0 +1,4 @@
+Sistema de Recomendação Simples
+Objetivo: Desenvolver um sistema de recomendação básico.
+Como Fazer: Implementar recomendação por similaridade usando pandas.
+Habilidades: Algoritmos de recomendação, análise de dados.

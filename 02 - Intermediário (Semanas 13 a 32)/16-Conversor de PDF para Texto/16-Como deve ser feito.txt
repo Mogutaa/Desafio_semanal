@@ -1,0 +1,5 @@
+Conversor de PDF para Texto
+
+Objetivo: Extrair texto de arquivos PDF.
+Como Fazer: Usar a biblioteca PyPDF2 para ler e extrair texto.
+Habilidades: Manipulação de arquivos e uso de bibliotecas externas.

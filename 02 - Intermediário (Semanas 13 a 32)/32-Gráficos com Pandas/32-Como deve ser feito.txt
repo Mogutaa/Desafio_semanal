@@ -1,0 +1,3 @@
+Gráficos com Pandas
+Objetivo: Gerar gráficos usando o Pandas para analisar e visualizar dados de um conjunto pré-definido.
+Como Fazer: Carregar dados com Pandas e utilizar matplotlib para criar gráficos de linhas, barras, e outros tipos, que representem insights significativos.

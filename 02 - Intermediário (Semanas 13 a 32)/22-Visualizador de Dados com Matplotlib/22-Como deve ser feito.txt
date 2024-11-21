@@ -1,0 +1,5 @@
+Visualizador de Dados com Matplotlib
+
+Objetivo: Criar gráficos básicos com dados fornecidos.
+Como Fazer: Usar a biblioteca matplotlib para gerar gráficos.
+Habilidades: Visualização de dados, gráficos.

@@ -1,0 +1,119 @@
+09 - Calculadora de IMC
+Objetivo do Projeto
+O objetivo deste projeto é criar uma aplicação que permita ao usuário inserir seu peso e altura e calcular o Índice de Massa Corporal (IMC), além de interpretar o valor do IMC, classificando-o em uma das categorias de saúde (baixo peso, peso normal, sobrepeso, obesidade).
+
+Especificações do Projeto
+Funcionalidades:
+
+Entrada de peso e altura: O programa deve solicitar ao usuário que insira seu peso (em kg) e altura (em metros).
+Cálculo do IMC: O IMC será calculado utilizando a fórmula:
+
+IMC = peso/altura²
+
+​
+ 
+Classificação do IMC: Após o cálculo, o IMC deve ser classificado de acordo com os seguintes critérios:
+Abaixo do peso: IMC < 18.5
+Peso normal: 18.5 ≤ IMC < 24.9
+Sobrepeso: 25 ≤ IMC < 29.9
+Obesidade: IMC ≥ 30
+Exibição dos resultados: O programa deve exibir o IMC calculado e a classificação correspondente.
+Entrada do Usuário:
+
+O programa pedirá ao usuário que forneça seu peso (em kg) e altura (em metros). A entrada precisa ser validada para garantir que o usuário forneça valores numéricos válidos.
+Saída:
+
+O programa exibirá o IMC calculado e a categoria correspondente ao valor do IMC, como por exemplo:
+makefile
+Copiar código
+Seu IMC é: 22.5
+Categoria: Peso normal
+Estrutura do Projeto
+Entrada de Dados:
+
+O programa deve solicitar que o usuário insira seu peso e altura.
+A entrada deve ser validada para garantir que o usuário forneceu números válidos.
+Cálculo do IMC:
+
+O IMC será calculado a partir da fórmula fornecida, usando os valores de peso e altura.
+Classificação do IMC:
+
+O programa deve verificar o valor do IMC calculado e classificá-lo de acordo com os critérios estabelecidos (abaixo do peso, peso normal, sobrepeso, obesidade).
+Exibição dos Resultados:
+
+O IMC calculado e a categoria correspondente devem ser exibidos de forma clara e compreensível para o usuário.
+Passos para Implementação
+Solicitar Entrada de Dados:
+
+O programa deve pedir ao usuário para digitar seu peso e altura. A entrada deve ser validada para garantir que o usuário forneça apenas números válidos.
+Exemplo de código para entrada:
+python
+Copiar código
+while True:
+    try:
+        peso = float(input("Digite seu peso em kg: "))
+        altura = float(input("Digite sua altura em metros: "))
+        if peso <= 0 or altura <= 0:
+            print("Peso e altura devem ser números positivos. Tente novamente.")
+        else:
+            break
+    except ValueError:
+        print("Por favor, insira valores válidos.")
+Cálculo do IMC:
+
+IMC = peso/altura²
+​
+ .
+Exemplo de cálculo:
+python
+Copiar código
+imc = peso / (altura ** 2)
+Classificação do IMC:
+
+Após calcular o IMC, você deve usar uma estrutura condicional para classificar o IMC de acordo com os valores padrão:
+python
+Copiar código
+if imc < 18.5:
+    categoria = "Abaixo do peso"
+elif 18.5 <= imc < 24.9:
+    categoria = "Peso normal"
+elif 25 <= imc < 29.9:
+    categoria = "Sobrepeso"
+else:
+    categoria = "Obesidade"
+Exibir os Resultados:
+
+O programa deve exibir o IMC calculado e a categoria correspondente.
+python
+Copiar código
+print(f"\nSeu IMC é: {imc:.2f}")
+print(f"Categoria: {categoria}")
+Aprendizados e Conceitos Chave
+Validação de Entrada de Dados:
+
+O projeto ensina como garantir que o usuário forneça dados válidos, usando estruturas de controle como try-except e validações condicionais (ex. garantir que peso e altura sejam números positivos).
+Cálculos Matemáticos e Fórmulas:
+
+O projeto envolve o uso de fórmulas matemáticas, especificamente o cálculo de IMC, o que ajuda a entender a aplicação de operações matemáticas simples no Python.
+Estruturas Condicionais (if-else):
+
+O uso de if-else é fundamental para classificar o IMC em diferentes categorias com base no valor calculado. Isso ajuda a entender como tomar decisões no código com base em condições.
+Formatando Saídas:
+
+Exibir resultados de maneira formatada e legível é um aprendizado importante. O formato de saída do IMC, com duas casas decimais (.2f), é uma boa prática para tornar os números mais amigáveis ao usuário.
+Extensões e Melhorias
+Interface Gráfica (Opcional):
+
+O projeto pode ser expandido para uma interface gráfica com o uso de Tkinter, onde o usuário pode inserir os valores de peso e altura em campos de entrada e visualizar o resultado em uma janela.
+Salvar Histórico:
+
+Você pode adicionar a funcionalidade de salvar os cálculos de IMC em um arquivo de texto ou banco de dados para que o usuário possa consultar os cálculos anteriores.
+Função de Repetição:
+
+O programa pode ser expandido para permitir que o usuário calcule o IMC várias vezes sem precisar reiniciar o programa. Após cada cálculo, o programa pode perguntar se o usuário deseja realizar outro cálculo.
+Considerar Outras Fórmulas:
+
+O IMC é uma das várias fórmulas para medir a saúde do indivíduo. O projeto pode ser expandido para incluir outras medidas, como a fórmula de gordura corporal, por exemplo.
+Personalização da Classificação:
+
+Adicionar mais categorias ou personalizar as mensagens de classificação do IMC com base no gênero ou idade do usuário, embora o IMC seja um indicador generalizado, essa personalização pode tornar o programa mais interessante.

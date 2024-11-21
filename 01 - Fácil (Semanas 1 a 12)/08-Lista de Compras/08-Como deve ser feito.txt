@@ -1,0 +1,150 @@
+08 - Lista de Compras
+Objetivo do Projeto
+O objetivo deste projeto é criar um aplicativo simples de lista de compras, onde o usuário pode adicionar, remover e visualizar itens. Esse tipo de aplicativo é uma ótima maneira de aprender a trabalhar com listas, entradas de usuário e operações básicas de manipulação de dados em Python.
+
+Especificações do Projeto
+Funcionalidades:
+
+Adicionar itens: O usuário pode adicionar novos itens à lista de compras.
+Remover itens: O usuário pode remover itens da lista de compras.
+Visualizar lista: O usuário pode visualizar todos os itens presentes na lista de compras.
+Salvar lista: (Opcional) O programa pode permitir salvar a lista de compras em um arquivo para que ela seja preservada entre execuções.
+Limpar lista: (Opcional) O usuário pode ter a opção de limpar toda a lista de compras de uma vez.
+Entrada do Usuário:
+
+O programa pedirá ao usuário para escolher a ação que deseja realizar (adicionar, remover, visualizar ou limpar a lista).
+O programa também pedirá para o usuário fornecer o nome do item quando adicionar ou remover.
+Saída:
+
+O programa exibirá a lista de compras atualizada após cada ação (adicionar, remover, limpar, etc.).
+Ao visualizar a lista, o programa exibirá todos os itens da lista, um por um.
+Estrutura do Projeto
+Adicionar Itens:
+
+O usuário pode digitar o nome do item que deseja adicionar à lista.
+A lista deve ser atualizada e o programa deve informar ao usuário que o item foi adicionado com sucesso.
+Remover Itens:
+
+O usuário deve ser capaz de remover itens da lista. Isso pode ser feito pedindo ao usuário para inserir o nome do item ou o índice do item na lista.
+Visualizar a Lista:
+
+O programa deve exibir todos os itens na lista, formatados de maneira legível.
+Salvar e Carregar Lista (Opcional):
+
+A lista pode ser salva em um arquivo de texto para persistir os dados entre execuções. Isso pode ser feito com a manipulação de arquivos (por exemplo, salvar a lista em um arquivo .txt).
+Limpar Lista (Opcional):
+
+O programa pode ter a opção de limpar todos os itens da lista, o que deve ser confirmado pelo usuário para evitar a exclusão acidental.
+Passos para Implementação
+Criar a Estrutura de Dados (Lista):
+
+A lista de compras pode ser armazenada em uma lista simples do Python. Inicialmente, a lista pode estar vazia e será preenchida conforme o usuário adicionar itens.
+Exemplo:
+python
+Copiar código
+lista_compras = []
+Adicionar Itens à Lista:
+
+O programa deve solicitar ao usuário o nome do item e adicioná-lo à lista.
+python
+Copiar código
+item = input("Digite o nome do item para adicionar à lista: ")
+lista_compras.append(item)
+Remover Itens da Lista:
+
+O programa pode pedir ao usuário para fornecer o nome ou o índice do item a ser removido.
+python
+Copiar código
+item = input("Digite o nome do item para remover: ")
+if item in lista_compras:
+    lista_compras.remove(item)
+else:
+    print("Item não encontrado na lista.")
+Visualizar Itens da Lista:
+
+Para visualizar os itens, o programa pode percorrer a lista e exibi-los um por um.
+python
+Copiar código
+print("Sua lista de compras:")
+for item in lista_compras:
+    print(f"- {item}")
+Salvar a Lista em um Arquivo:
+
+Para persistir a lista entre as execuções, você pode salvar a lista em um arquivo de texto usando a função open().
+python
+Copiar código
+with open('lista_compras.txt', 'w') as file:
+    for item in lista_compras:
+        file.write(item + '\n')
+Carregar a Lista de um Arquivo:
+
+Quando o programa for executado novamente, ele pode carregar a lista salva no arquivo.
+python
+Copiar código
+try:
+    with open('lista_compras.txt', 'r') as file:
+        lista_compras = [line.strip() for line in file.readlines()]
+except FileNotFoundError:
+    print("Arquivo não encontrado, iniciando uma nova lista.")
+Menu de Opções:
+
+O programa deve apresentar um menu para o usuário, onde ele possa escolher uma ação (adicionar, remover, visualizar, salvar, etc.).
+python
+Copiar código
+def exibir_menu():
+    print("\nEscolha uma opção:")
+    print("1 - Adicionar item")
+    print("2 - Remover item")
+    print("3 - Visualizar lista")
+    print("4 - Salvar lista")
+    print("5 - Sair")
+
+while True:
+    exibir_menu()
+    escolha = input("Digite o número da opção desejada: ")
+    if escolha == '1':
+        # Adicionar item
+        pass
+    elif escolha == '2':
+        # Remover item
+        pass
+    elif escolha == '3':
+        # Visualizar lista
+        pass
+    elif escolha == '4':
+        # Salvar lista
+        pass
+    elif escolha == '5':
+        print("Saindo...")
+        break
+    else:
+        print("Opção inválida, tente novamente.")
+Aprendizados e Conceitos Chave
+Manipulação de Listas:
+
+O uso de listas para armazenar e gerenciar os itens da compra ensina como adicionar, remover e acessar elementos de uma lista, que são operações fundamentais em Python.
+Entrada e Validação de Dados:
+
+O programa envolve receber entradas do usuário, como o nome do item, e validar essas entradas (por exemplo, verificar se o item já existe na lista antes de remover).
+Manipulação de Arquivos:
+
+Salvar e carregar a lista usando arquivos de texto oferece uma introdução à manipulação de arquivos em Python, que é um conceito muito útil em programação.
+Estruturas Condicionais e Loops:
+
+O uso de if, else, while e for no código ajuda a criar um fluxo lógico de controle, onde o programa executa ações diferentes dependendo das escolhas do usuário.
+Extensões e Melhorias
+Adicionar Categorias aos Itens:
+
+O usuário pode categorizar os itens (por exemplo, "Alimentos", "Produtos de Limpeza", etc.) e visualizar a lista organizada por categoria.
+Ordenação da Lista:
+
+Você pode permitir que a lista de compras seja ordenada por ordem alfabética, para facilitar a visualização dos itens.
+Interface Gráfica:
+
+O projeto pode ser expandido para uma interface gráfica com o uso do Tkinter, onde o usuário pode adicionar e remover itens através de botões em vez de digitar comandos no terminal.
+Armazenamento em Banco de Dados:
+
+Em vez de salvar os dados em um arquivo de texto, você pode integrar um banco de dados simples, como SQLite, para salvar e carregar a lista de compras.
+Prioridade para Itens:
+
+O usuário pode marcar itens como de alta, média ou baixa prioridade, e a lista pode ser exibida com itens prioritários no topo.

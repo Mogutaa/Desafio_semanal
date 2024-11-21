@@ -1,0 +1,4 @@
+Visualizador de Dados com Dash
+Objetivo: Criar um dashboard interativo para visualização de dados.
+Como Fazer: Usar Dash para criar gráficos e controles interativos.
+Habilidades: Visualização interativa, desenvolvimento de dashboards.

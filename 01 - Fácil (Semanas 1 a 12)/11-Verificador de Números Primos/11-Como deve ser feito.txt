@@ -1,0 +1,95 @@
+11 - Verificador de Números Primos
+Objetivo do Projeto
+O objetivo desse projeto é criar um programa que permita ao usuário verificar se um número dado é primo. Um número primo é um número natural maior que 1 que não pode ser formado multiplicando dois números naturais menores que ele.
+
+Especificações do Projeto
+Funcionalidades:
+
+Entrada de número: O programa deve solicitar ao usuário que insira um número inteiro para verificar se ele é primo.
+Verificação de número primo: O programa deve verificar se o número fornecido é primo ou não.
+Exibição do resultado: O programa deve exibir uma mensagem dizendo se o número é primo ou não.
+Entrada do Usuário:
+
+O usuário fornecerá um número inteiro maior que 1, que será verificado para saber se é primo.
+Saída:
+
+O programa exibirá uma mensagem como:
+"O número [número] é primo."
+"O número [número] não é primo."
+Estrutura do Projeto
+Entrada de Dados:
+
+O programa solicita ao usuário que insira um número inteiro. Esse número deve ser validado para garantir que o valor seja maior que 1, pois os números primos são maiores que 1.
+Verificação de Número Primo:
+
+Para verificar se um número é primo, o programa precisa verificar se o número pode ser dividido por algum número inteiro entre 2 e o número-1. Se houver um divisor além de 1 e o próprio número, então ele não é primo.
+Exibição do Resultado:
+
+O programa deve exibir uma mensagem clara informando se o número fornecido é primo ou não.
+Passos para Implementação
+Solicitar Entrada do Usuário:
+
+O programa começa pedindo ao usuário para fornecer um número.
+python
+Copiar código
+numero = int(input("Digite um número para verificar se é primo: "))
+Verificar se o Número é Primo:
+
+Um número é primo se ele não for divisível por nenhum número entre 2 e o próprio número-1.
+Para verificar isso, podemos usar um loop que percorre os números de 2 até a raiz quadrada do número (otimização) e verifica se o número é divisível por algum desses números.
+python
+Copiar código
+if numero < 2:
+    print("O número deve ser maior que 1.")
+else:
+    for i in range(2, numero):
+        if numero % i == 0:
+            print(f"O número {numero} não é primo.")
+            break
+    else:
+        print(f"O número {numero} é primo.")
+Otimização (opcional):
+
+Uma melhoria no código seria usar a raiz quadrada do número como limite superior para a verificação. Isso reduz o número de iterações, tornando o algoritmo mais eficiente. A razão para isso é que se um número não tiver divisores até a sua raiz quadrada, não terá divisores maiores que ela.
+python
+Copiar código
+import math
+
+if numero < 2:
+    print("O número deve ser maior que 1.")
+else:
+    for i in range(2, int(math.sqrt(numero)) + 1):
+        if numero % i == 0:
+            print(f"O número {numero} não é primo.")
+            break
+    else:
+        print(f"O número {numero} é primo.")
+Exibição do Resultado:
+
+Ao final, o programa deve informar se o número é primo ou não, com base na verificação realizada.
+Aprendizados e Conceitos Chave
+Verificação de Números Primos:
+
+Esse projeto ensina como verificar se um número é primo. A lógica de verificar divisores é fundamental para entender como funciona a verificação de primalidade.
+Estruturas de Controle:
+
+O uso de loops (for e else) e condicionais (if/else) é essencial para implementar a lógica de verificação. O uso do else em um loop, que é executado somente quando o loop não é interrompido pelo break, é uma característica interessante que pode ser explorada.
+Otimização de Algoritmos:
+
+A utilização da raiz quadrada do número para otimizar a verificação de primalidade ajuda a melhorar a eficiência do algoritmo, especialmente quando lidamos com números grandes.
+Entrada e Saída de Dados:
+
+O projeto envolve a entrada de dados do usuário e exibe os resultados de maneira clara e objetiva. Isso ajuda a praticar como manipular entradas de dados e exibir saídas de forma interativa.
+Extensões e Melhorias
+Verificação de Múltiplos Números:
+
+O programa pode ser expandido para permitir que o usuário insira vários números e verifique se cada um deles é primo.
+Armazenamento de Resultados:
+
+O programa pode ser aprimorado para armazenar os números primos que o usuário insere em uma lista ou arquivo de texto para que o usuário possa consultar os resultados posteriormente.
+Interface Gráfica (Opcional):
+
+O projeto pode ser expandido para uma interface gráfica usando Tkinter, permitindo que o usuário insira o número e visualize o resultado em uma janela.
+Verificação de Números de Múltiplos Tipos:
+
+O projeto pode ser adaptado para verificar se um número é primo, perfeito ou outro tipo de número especial.

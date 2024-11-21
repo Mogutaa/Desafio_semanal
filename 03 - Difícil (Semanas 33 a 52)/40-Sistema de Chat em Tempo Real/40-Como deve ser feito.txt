@@ -1,0 +1,4 @@
+Sistema de Chat em Tempo Real
+Objetivo: Criar um chat onde usuários podem enviar mensagens em tempo real.
+Como Fazer: Usar Flask e Socket.IO para comunicação em tempo real.
+Habilidades: WebSockets, comunicação em tempo real.

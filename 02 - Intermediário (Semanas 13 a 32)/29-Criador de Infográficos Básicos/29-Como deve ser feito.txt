@@ -1,0 +1,5 @@
+Criador de Infográficos
+
+Objetivo: Criar infográficos simples a partir de dados fornecidos.
+Como Fazer: Usar a biblioteca matplotlib ou seaborn para criar gráficos visuais.
+Habilidades: Visualização de dados, gráficos interativos.

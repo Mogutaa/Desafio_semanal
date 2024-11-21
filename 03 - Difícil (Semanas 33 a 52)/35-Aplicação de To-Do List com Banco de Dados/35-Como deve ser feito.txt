@@ -1,0 +1,4 @@
+Aplicação de To-Do List com Banco de Dados
+Objetivo: Criar uma lista de tarefas com persistência em banco de dados.
+Como Fazer: Usar sqlite3 para armazenamento e uma GUI ou interface CLI para gerenciar as tarefas.
+Habilidades: Banco de dados, organização de tarefas.

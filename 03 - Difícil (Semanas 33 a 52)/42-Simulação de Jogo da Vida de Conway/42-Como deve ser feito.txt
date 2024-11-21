@@ -1,0 +1,4 @@
+Simulação de Jogo da Vida de Conway
+Objetivo: Criar uma simulação do Jogo da Vida de Conway.
+Como Fazer: Implementar o algoritmo de células vivas e mortas em uma matriz.
+Habilidades: Algoritmos, simulação gráfica.

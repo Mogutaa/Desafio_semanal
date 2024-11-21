@@ -1,0 +1,5 @@
+Chatbot Simples
+
+Objetivo: Criar um chatbot básico com respostas pré-programadas.
+Como Fazer: Usar input() e if/else para criar interações simples.
+Habilidades: Processamento de linguagem natural básico, controle de fluxo.

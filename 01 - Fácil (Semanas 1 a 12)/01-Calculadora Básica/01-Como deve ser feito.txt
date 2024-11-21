@@ -1,0 +1,75 @@
+Especificações do Projeto
+Funcionalidades:
+
+A calculadora deve solicitar ao usuário dois números e a operação desejada.
+As operações suportadas devem incluir:
+Adição (+)
+Subtração (-)
+Multiplicação (*)
+Divisão (/)
+Deve exibir o resultado da operação ao usuário.
+Deverá incluir uma mensagem de erro caso ocorra uma divisão por zero.
+Entrada do Usuário:
+
+O usuário insere os números e o tipo de operação.
+Cada operação deve ser identificada por um símbolo ou menu numérico para facilitar a seleção.
+Saída:
+
+O resultado da operação é exibido de forma clara.
+Se uma operação inválida for inserida, uma mensagem de erro deve ser exibida.
+Estrutura do Projeto
+Configuração Inicial:
+
+Escolher uma abordagem de desenvolvimento, como linha de comando ou interface gráfica simples (para fins deste projeto inicial, a linha de comando é suficiente).
+Planejar o fluxo de interação com o usuário.
+Divisão em Funções:
+
+Funções Matemáticas: Crie uma função para cada operação. Essa abordagem modular torna o código mais limpo e reutilizável.
+Função Principal: Uma função que coordena as interações, recebe a entrada do usuário e chama a função de operação correta com base na escolha.
+Controle de Erros:
+
+Inclua uma verificação para operações inválidas, como tentativa de divisão por zero ou escolha de operações inexistentes.
+Utilize mensagens de erro amigáveis para orientar o usuário, caso ele cometa algum erro.
+Estrutura de Repetição (Opcional):
+
+Considere permitir que o usuário execute múltiplas operações sem precisar reiniciar o programa. Isso pode ser feito com um loop que permite escolher novas operações até que o usuário opte por sair.
+Passos para Implementação
+Definir Funções para Cada Operação:
+
+Crie uma função específica para adição, subtração, multiplicação e divisão.
+Cada função deve receber dois números e retornar o resultado da operação correspondente.
+Solicitar a Escolha do Usuário:
+
+Solicite ao usuário que escolha o tipo de operação.
+Use uma estrutura condicional para chamar a função correta com base na entrada do usuário.
+Lidar com Divisão por Zero:
+
+Insira uma condição para verificar se o divisor é zero antes de executar a operação de divisão.
+Exiba uma mensagem de erro se o usuário tentar dividir por zero.
+Mostrar o Resultado:
+
+Exiba o resultado da operação após a função ser chamada.
+Aprendizados e Conceitos Chave
+Funções:
+
+O uso de funções é essencial para modularizar o código e torná-lo mais organizado e fácil de entender.
+Este projeto permite praticar a criação, chamada e retorno de valores de funções.
+Entrada e Saída:
+
+Aprender a usar input() para capturar dados do usuário e print() para exibir os resultados é fundamental para interatividade básica.
+Controle de Fluxo:
+
+Estruturas condicionais (if, elif, else) são usadas para verificar qual operação o usuário escolheu e tratar erros como divisão por zero.
+Tratamento de Erros e Validação:
+
+Validar a entrada do usuário e verificar condições especiais (como divisão por zero) são práticas essenciais em programação para melhorar a experiência do usuário.
+Pensamento Algorítmico:
+
+Dividir o problema em partes menores (uma função para cada operação e uma função principal para organizar o fluxo) ajuda a desenvolver habilidades de resolução de problemas.
+Extensões e Melhorias
+Após a implementação básica, aqui estão algumas ideias de melhorias para expandir a calculadora:
+
+Suporte para Mais Operações: Como potência, raiz quadrada e módulo.
+Histórico de Operações: Exibir o histórico das últimas operações realizadas.
+Interface Gráfica: Com um módulo como Tkinter, você pode criar botões e campos de entrada para uma experiência mais interativa.
+Entrada e Saída Aprimoradas: Permitir que o usuário insira expressões completas (ex., 5 + 3 * 2), exigindo o uso de avaliação de expressões.

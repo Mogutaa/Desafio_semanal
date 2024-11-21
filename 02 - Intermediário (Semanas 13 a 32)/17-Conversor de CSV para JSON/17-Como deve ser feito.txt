@@ -1,0 +1,5 @@
+Conversor de CSV para JSON
+
+Objetivo: Converter dados de um arquivo CSV para o formato JSON.
+Como Fazer: Usar as bibliotecas csv e json para realizar a conversão.
+Habilidades: Manipulação de arquivos CSV e JSON.

@@ -1,0 +1,4 @@
+Processamento de Imagens com OpenCV
+Objetivo: Manipular e processar imagens, aplicando filtros e transformações.
+Como Fazer: Usar OpenCV para aplicar filtros e manipulações em imagens.
+Habilidades: Processamento de imagens, uso de bibliotecas avançadas.

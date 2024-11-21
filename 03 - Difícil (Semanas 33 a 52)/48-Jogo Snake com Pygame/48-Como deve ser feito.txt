@@ -1,0 +1,4 @@
+Jogo Snake com Pygame
+Objetivo: Desenvolver o clássico jogo Snake usando Pygame.
+Como Fazer: Usar Pygame para criar o jogo com controles de movimento e pontuação.
+Habilidades: Desenvolvimento de jogos, Pygame.

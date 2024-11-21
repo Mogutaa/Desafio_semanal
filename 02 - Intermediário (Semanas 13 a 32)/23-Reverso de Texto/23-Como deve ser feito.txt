@@ -1,0 +1,5 @@
+Reverso de Texto
+
+Objetivo: Mostrar o texto digitado de trás para frente.
+Como Fazer: Usar slicing em strings para inverter o texto.
+Habilidades: Manipulação de strings e uso de slicing.

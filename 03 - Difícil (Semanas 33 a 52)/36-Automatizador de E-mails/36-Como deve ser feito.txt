@@ -1,0 +1,4 @@
+Automatizador de E-mails
+Objetivo: Desenvolver um sistema que envia e-mails automaticamente.
+Como Fazer: Utilizar smtplib para envio de e-mails e automatizar com loops.
+Habilidades: Automação, envio de e-mails.

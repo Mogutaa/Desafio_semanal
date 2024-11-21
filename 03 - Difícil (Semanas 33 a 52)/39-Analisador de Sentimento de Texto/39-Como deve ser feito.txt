@@ -1,0 +1,4 @@
+Analisador de Sentimento de Texto
+Objetivo: Analisar o sentimento de textos (positivo, negativo, neutro).
+Como Fazer: Usar TextBlob ou VADER para análise de sentimento em textos.
+Habilidades: Processamento de linguagem natural (NLP).

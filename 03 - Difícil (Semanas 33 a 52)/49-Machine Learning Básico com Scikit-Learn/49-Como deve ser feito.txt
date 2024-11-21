@@ -1,0 +1,4 @@
+Machine Learning Básico com Scikit-Learn
+Objetivo: Desenvolver um modelo simples de machine learning.
+Como Fazer: Usar scikit-learn para treinar e avaliar um modelo de classificação.
+Habilidades: Machine learning, classificação.

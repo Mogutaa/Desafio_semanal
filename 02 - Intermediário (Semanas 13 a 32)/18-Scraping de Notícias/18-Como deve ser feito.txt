@@ -1,0 +1,5 @@
+Scraping de Notícias
+
+Objetivo: Extrair manchetes de um site de notícias usando web scraping.
+Como Fazer: Usar as bibliotecas requests e BeautifulSoup para extrair dados da web.
+Habilidades: Web scraping, requisições HTTP.

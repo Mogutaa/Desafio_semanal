@@ -1,0 +1,98 @@
+03 - Contador de Palavras
+Objetivo do Projeto
+O objetivo desse projeto é criar um programa que conte o número de palavras em uma entrada de texto fornecida pelo usuário. Este projeto ajuda a entender como processar e manipular strings e como fazer contagens com base em critérios específicos, como palavras ou caracteres.
+
+Especificações do Projeto
+Funcionalidades:
+O programa deve receber um texto do usuário.
+O programa deve contar quantas palavras estão presentes no texto inserido.
+O programa pode exibir também o número de caracteres do texto e, se desejado, o número de palavras únicas.
+Entrada do Usuário:
+O usuário deve inserir um texto em que o programa será capaz de contar as palavras.
+Saída:
+O programa exibirá o número de palavras no texto.
+Opcionalmente, também pode exibir:
+O número de caracteres (com ou sem espaços).
+A contagem de palavras únicas no texto (se o usuário desejar).
+Estrutura do Projeto
+Receber o Texto do Usuário:
+
+O programa deve pedir ao usuário que insira um texto.
+Para isso, você pode usar a função input() para capturar a entrada.
+Contar o Número de Palavras:
+
+Uma palavra é geralmente separada por espaços, por isso você pode usar o método split() para dividir o texto em uma lista de palavras.
+O comprimento dessa lista representará o número total de palavras no texto.
+Contar Caracteres:
+
+Para contar os caracteres, você pode simplesmente usar a função len() na string original. Caso queira excluir os espaços, você pode utilizar o método replace() para removê-los.
+Contagem de Palavras Únicas (Opcional):
+
+Para contar as palavras únicas, converta a lista de palavras para um conjunto (set), já que conjuntos não permitem duplicatas. O comprimento do conjunto será o número de palavras únicas.
+Exibir o Resultado:
+
+Após calcular as métricas (número de palavras, número de caracteres, número de palavras únicas), o programa deve exibir essas informações para o usuário de forma clara.
+Passos para Implementação
+Solicitar o Texto do Usuário:
+
+Utilize o input() para capturar o texto inserido pelo usuário.
+Exemplo:
+python
+
+texto = input("Digite um texto para contar as palavras: ")
+Contar o Número de Palavras:
+
+Use o método split() para dividir o texto em uma lista de palavras. Cada palavra será um item da lista.
+Exemplo:
+python
+
+palavras = texto.split()
+numero_de_palavras = len(palavras)
+Contar os Caracteres:
+
+Para contar o número de caracteres, use len() na string original.
+Se quiser contar sem os espaços, você pode usar:
+python
+
+numero_de_caracteres = len(texto.replace(" ", ""))
+Contar as Palavras Únicas (Opcional):
+
+Converta a lista de palavras para um conjunto (set), que eliminará automaticamente as palavras duplicadas.
+Exemplo:
+python
+Copiar código
+palavras_unicas = set(palavras)
+numero_de_palavras_unicas = len(palavras_unicas)
+Exibir os Resultados:
+
+Exiba os resultados de forma clara e informativa.
+Exemplo:
+python
+
+print(f"Número de palavras: {numero_de_palavras}")
+print(f"Número de caracteres (sem espaços): {numero_de_caracteres}")
+print(f"Número de palavras únicas: {numero_de_palavras_unicas}")
+Aprendizados e Conceitos Chave
+Manipulação de Strings:
+
+Aprender a trabalhar com strings é essencial em qualquer linguagem de programação. A função split() ajuda a dividir strings em partes, enquanto o join() pode ser útil para combinar strings novamente.
+Métodos como replace(), len(), lower(), e strip() são frequentemente usados para processamento de texto.
+Listas e Conjuntos:
+
+A lista é uma das estruturas de dados mais usadas em Python. Ela é útil para armazenar e manipular uma coleção de itens.
+O conjunto (set) é útil quando você precisa garantir que os itens sejam únicos. Neste caso, é utilizado para contar palavras únicas, removendo duplicatas automaticamente.
+Contagem e Processamento de Dados:
+
+A contagem de palavras, caracteres e palavras únicas ensina como contar elementos dentro de uma coleção. Esse conceito é útil para muitos tipos de aplicativos, desde análise de texto até validação de entradas.
+Interatividade com o Usuário:
+
+Este projeto é uma excelente maneira de praticar a captura de dados via input() e exibição de resultados com print(). Essas interações são fundamentais para criar aplicações que se comunicam com o usuário.
+Extensões e Melhorias
+Excluir Pontuação: Você pode melhorar o programa ao excluir pontuação (como vírgulas, pontos e exclamações), pois elas podem afetar o resultado da contagem de palavras.
+
+Uma abordagem simples seria usar o módulo string e a função translate() para remover caracteres especiais.
+Contagem de Frequência de Palavras: Além de contar o número de palavras, você pode contar quantas vezes cada palavra aparece no texto, criando um dicionário onde as palavras são as chaves e as contagens são os valores.
+
+Interface Gráfica: Usar a biblioteca Tkinter para criar uma interface gráfica onde o usuário pode inserir o texto e ver os resultados em campos específicos.
+
+Análise de Sentimentos: Estender o projeto para contar palavras positivas e negativas ou analisar o tom do texto, utilizando bibliotecas de processamento de linguagem natural como o NLTK ou TextBlob.

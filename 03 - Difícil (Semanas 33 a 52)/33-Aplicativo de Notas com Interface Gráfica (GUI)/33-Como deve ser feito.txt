@@ -1,0 +1,4 @@
+Aplicativo de Notas com Interface Gráfica (GUI)
+Objetivo: Criar um aplicativo para gerenciar notas com uma interface gráfica.
+Como Fazer: Usar tkinter para desenvolver a GUI e armazenar as notas em um arquivo ou banco de dados.
+Habilidades: GUI com tkinter, manipulação de dados.

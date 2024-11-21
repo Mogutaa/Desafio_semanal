@@ -1,0 +1,5 @@
+Gerenciador de Tarefas
+
+Objetivo: Criar um sistema para gerenciar tarefas diárias (adicionar, excluir, listar).
+Como Fazer: Usar listas ou dicionários para armazenar e gerenciar tarefas.
+Habilidades: Manipulação de listas/dicionários, entrada/saída de dados.

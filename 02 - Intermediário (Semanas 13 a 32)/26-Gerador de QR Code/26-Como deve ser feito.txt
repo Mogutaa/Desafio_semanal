@@ -1,0 +1,5 @@
+Gerador de QR Code
+
+Objetivo: Gerar QR codes a partir de URLs ou textos.
+Como Fazer: Usar a biblioteca qrcode para gerar os códigos.
+Habilidades: Geração de códigos QR com bibliotecas externas.

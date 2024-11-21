@@ -1,0 +1,5 @@
+Sistema de Login Simples
+
+Objetivo: Criar um sistema de login básico com nome de usuário e senha.
+Como Fazer: Usar condições para validar o login.
+Habilidades: Manipulação de strings, controle de fluxo, segurança básica.

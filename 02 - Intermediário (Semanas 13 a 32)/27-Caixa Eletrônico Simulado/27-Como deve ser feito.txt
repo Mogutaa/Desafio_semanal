@@ -1,0 +1,5 @@
+Caixa Eletrônico Simulado
+
+Objetivo: Criar um simulador de caixa eletrônico, permitindo depósitos e retiradas.
+Como Fazer: Usar variáveis para controlar saldo e transações.
+Habilidades: Controle de fluxo, aritmética simples.

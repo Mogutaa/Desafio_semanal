@@ -1,0 +1,4 @@
+Criação de uma Aplicação Web Completa com Django
+Objetivo: Desenvolver uma aplicação web completa com Django.
+Como Fazer: Usar Django para configurar rotas, modelos e uma interface.
+Habilidades: Desenvolvimento web, Django.

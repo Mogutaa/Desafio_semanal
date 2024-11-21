@@ -1,0 +1,4 @@
+Controle de Estoque Simples
+Objetivo: Desenvolver um sistema básico para gerenciar o estoque de produtos, permitindo adicionar, remover e visualizar quantidades de itens.
+Como Fazer: Utilizar listas ou um banco de dados simples para armazenar informações de produtos e quantidades, com uma interface básica de linha de comando.
+Habilidades: Manipulação de dados, estruturas de dados.

@@ -1,0 +1,4 @@
+Automação com Selenium
+Objetivo: Automatizar tarefas repetitivas em sites, como preenchimento de formulários.
+Como Fazer: Usar Selenium para navegar e interagir automaticamente com sites.
+Habilidades: Automação web, Selenium.

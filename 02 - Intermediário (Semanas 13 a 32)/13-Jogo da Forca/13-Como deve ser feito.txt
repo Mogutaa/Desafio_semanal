@@ -1,0 +1,127 @@
+13 - Jogo da Forca
+Objetivo do Projeto
+O objetivo deste projeto é criar uma versão simples do Jogo da Forca, onde o jogador deve adivinhar uma palavra secreta. O jogo tem um número limitado de tentativas para adivinhar as letras da palavra. A cada erro, o número de tentativas diminui. Se o jogador errar o número de vezes permitido, ele perde o jogo.
+
+Especificações do Projeto
+Funcionalidades:
+
+Escolha de Palavra Secreta: O programa escolherá uma palavra secreta aleatoriamente de uma lista predefinida de palavras.
+Entrada de Tentativas: O jogador pode tentar adivinhar a palavra, letra por letra.
+Exibição de Estado do Jogo: O programa mostrará ao jogador a palavra secreta, mas com as letras ocultas, representadas por underscores (ex: "_ _ _ _").
+Tentativas Restantes: O jogo vai informar ao jogador quantas tentativas restantes ele tem.
+Verificação de Vencedor ou Perdedor: O jogo termina quando o jogador adivinha a palavra correta ou quando o número de tentativas chega a zero.
+Exibição de Mensagens: O jogo deve mostrar se o jogador ganhou ou perdeu e oferecer a opção de jogar novamente.
+Entrada do Usuário:
+
+O jogador fornece uma letra para adivinhar. O programa valida se a entrada é uma única letra e se já foi tentada anteriormente.
+Saída:
+
+O programa exibe o estado atual da palavra, o número de tentativas restantes, e mensagens sobre o progresso do jogo.
+Estrutura do Projeto
+Escolha da Palavra Secreta:
+
+O programa pode escolher uma palavra aleatória de uma lista de palavras predefinidas.
+Exemplo de lista de palavras: ["python", "forca", "programacao", "jogo", "desenvolvimento"].
+Exibição do Estado Atual da Palavra:
+
+No início, o programa exibe a palavra secreta com todas as letras substituídas por underscores, indicando que ainda não foram adivinhadas.
+Entrada do Jogador:
+
+O jogador insere uma letra. O programa verifica se a letra já foi tentada e se é válida.
+Verificação da Letra:
+
+Se a letra estiver correta, o programa revela essa letra na palavra secreta.
+Se a letra estiver incorreta, o número de tentativas restantes é decrementado.
+Exibição do Jogo:
+
+A cada tentativa, o programa exibe:
+A palavra com as letras adivinhadas e as não adivinhadas.
+O número de tentativas restantes.
+As letras que o jogador já tentou.
+Fim do Jogo:
+
+O jogo termina quando o jogador adivinha todas as letras da palavra ou esgota as tentativas.
+Se o jogador adivinhar a palavra antes de esgotar as tentativas, ele vence.
+Se o número de tentativas chegar a zero, o jogador perde e o jogo revela a palavra secreta.
+Passos para Implementação
+Escolher uma Palavra Aleatória:
+
+Definir uma lista de palavras e usar a função random.choice() para escolher uma palavra aleatória.
+python
+Copiar código
+import random
+palavras = ["python", "forca", "programacao", "jogo", "desenvolvimento"]
+palavra_secreta = random.choice(palavras)
+Exibir a Palavra com Underscores:
+
+A palavra secreta é exibida com cada letra substituída por um underscore.
+python
+Copiar código
+palavra_atual = ["_" for _ in palavra_secreta]
+Loop Principal de Jogo:
+
+O jogo continua enquanto o número de tentativas for maior que zero e a palavra secreta não for completamente revelada.
+python
+Copiar código
+tentativas = 6  # Exemplo de tentativas
+letras_tentadas = []
+while tentativas > 0 and "_" in palavra_atual:
+    letra = input("Digite uma letra: ").lower()
+    
+    if letra in letras_tentadas:
+        print(f"Você já tentou a letra '{letra}' antes!")
+        continue
+    
+    letras_tentadas.append(letra)
+    
+    if letra in palavra_secreta:
+        for i, char in enumerate(palavra_secreta):
+            if char == letra:
+                palavra_atual[i] = letra
+    else:
+        tentativas -= 1
+    
+    print(f"Palavra: {' '.join(palavra_atual)}")
+    print(f"Tentativas restantes: {tentativas}")
+    print(f"Letras tentadas: {', '.join(letras_tentadas)}")
+Verificar Vitória ou Derrota:
+
+Se o jogador adivinhar todas as letras da palavra secreta, ele vence. Caso contrário, o jogo termina quando as tentativas se esgotam.
+python
+Copiar código
+if "_" not in palavra_atual:
+    print("Parabéns, você ganhou!")
+else:
+    print(f"Você perdeu! A palavra era '{palavra_secreta}'.")
+Jogar Novamente:
+
+Após terminar o jogo, o programa pode perguntar ao jogador se ele deseja jogar novamente.
+Aprendizados e Conceitos Chave
+Controle de Fluxo:
+
+O uso de loops (while) e condicionais (if/else) é essencial para controlar o andamento do jogo e garantir que as tentativas sejam feitas corretamente.
+Manipulação de Strings:
+
+O jogo exige uma boa manipulação de strings, como a substituição de caracteres por underscores e a verificação se uma letra está na palavra.
+Entrada e Validação:
+
+O projeto ensina a lidar com a entrada do usuário, incluindo a validação de que o jogador está fornecendo apenas uma letra e que a letra não foi tentada antes.
+Estruturas de Dados:
+
+Listas são usadas para armazenar a palavra secreta, o estado atual da palavra (com underscores), as tentativas restantes e as letras já tentadas.
+Extensões e Melhorias
+Adicionar Dicas:
+
+O jogo pode incluir dicas sobre a palavra secreta (como a categoria da palavra, se for um animal, fruta, etc.).
+Modo de Dificuldade:
+
+O jogador pode escolher entre diferentes níveis de dificuldade (por exemplo, 6, 8 ou 10 tentativas).
+Interface Gráfica (Opcional):
+
+O jogo pode ser expandido com uma interface gráfica simples usando Tkinter, para tornar a experiência mais interativa.
+Pistas ou Ajuda:
+
+O jogo pode oferecer uma pista para o jogador, revelando uma letra aleatória de vez em quando.
+Adicionar um “Desenhamento” da Forca:
+
+Uma versão mais visual do jogo pode desenhar a forca a cada erro, tornando o jogo mais dinâmico e intuitivo.

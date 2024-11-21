@@ -1,0 +1,4 @@
+Análise de Dados Climáticos
+Objetivo: Analisar dados de clima e criar visualizações.
+Como Fazer: Usar pandas para processar dados e matplotlib para gráficos.
+Habilidades: Análise de dados, visualização.

@@ -1,0 +1,77 @@
+12 - Conversor de Datas
+Objetivo do Projeto
+O objetivo desse projeto é criar uma ferramenta simples que permita ao usuário converter uma data entre diferentes formatos. O programa deve ser capaz de pegar uma data inserida no formato DD/MM/AAAA e convertê-la para outro formato, como MM/DD/AAAA, ou outros formatos desejados.
+
+Especificações do Projeto
+Funcionalidades:
+
+Entrada de Data: O programa deve permitir ao usuário inserir uma data em um formato específico.
+Conversão de Formato: O programa converterá a data para outro formato. O usuário pode escolher qual formato deseja, ou o programa pode simplesmente fazer uma conversão predefinida (como de DD/MM/AAAA para MM/DD/AAAA).
+Validação de Data: O programa deve garantir que a data inserida seja válida. Se o usuário inserir uma data inválida, o programa deve alertá-lo.
+Entrada do Usuário:
+
+O usuário fornece uma data em um formato específico (exemplo: DD/MM/AAAA).
+Saída:
+
+O programa deve exibir a data convertida em outro formato especificado ou predefinido.
+Estrutura do Projeto
+Entrada de Dados:
+
+O programa começa pedindo ao usuário para inserir uma data em um formato específico. A data será recebida como uma string.
+O programa pode pedir para o usuário escolher entre alguns formatos de entrada e saída, ou pode assumir um formato padrão para entrada e saída.
+Validação de Data:
+
+O programa deve validar se a data inserida pelo usuário é válida. Para isso, podemos usar a funcionalidade de parsing de datas do módulo datetime de Python, que tenta analisar a string e transformar em um objeto de data.
+Conversão de Formato:
+
+Depois de validar a data, o programa converte a data para o formato desejado, utilizando o método strftime() que permite formatar datas de acordo com padrões especificados (como %d para o dia, %m para o mês, e %Y para o ano).
+A conversão pode ser feita de diferentes maneiras, como de DD/MM/AAAA para MM/DD/AAAA, ou vice-versa.
+Exibição do Resultado:
+
+O programa exibe a data no novo formato para o usuário.
+Passos para Implementação
+Solicitar Entrada de Data:
+
+O programa começa pedindo ao usuário para digitar uma data.
+python
+Copiar código
+data = input("Digite uma data no formato DD/MM/AAAA: ")
+Validar a Data:
+
+Utilizando o módulo datetime, podemos tentar converter a string fornecida pelo usuário em um objeto de data.
+Se a data for válida, o programa continua; caso contrário, ele deve alertar o usuário.
+python
+Copiar código
+from datetime import datetime
+
+try:
+    data_obj = datetime.strptime(data, "%d/%m/%Y")
+except ValueError:
+    print("A data inserida é inválida. Por favor, insira no formato correto (DD/MM/AAAA).")
+Conversão de Formato:
+
+Após validar a data, o programa pode converter para outro formato usando o método strftime().
+python
+Copiar código
+data_convertida = data_obj.strftime("%m/%d/%Y")
+print(f"A data convertida é: {data_convertida}")
+Exibir o Resultado:
+
+O programa exibe a data convertida no formato desejado, caso a data fornecida seja válida.
+
+python
+Copiar código
+print(f"A data convertida é: {data_convertida}")
+Aprendizados e Conceitos Chave
+Manipulação de Datas:
+
+O projeto ajuda a aprender como trabalhar com datas em Python, utilizando o módulo datetime para análise e conversão de formatos de data.
+Conversão de Formatos:
+
+O programa explora o conceito de conversão de formatos de dados, o que é fundamental quando se lida com entradas e saídas em diferentes padrões.
+Validação de Dados:
+
+Este projeto é uma boa prática para validar entradas de usuários, garantindo que os dados inseridos sejam válidos e no formato esperado.
+Métodos strptime() e strftime():
+
+O strptime() é usado para analisar uma string e transformá-la em um objeto datetime, enquanto o strftime() permite que o objeto datetime seja convertido de volta em uma string, mas em um formato personalizado.

@@ -1,0 +1,4 @@
+Criação de API RESTful com Flask
+Objetivo: Criar uma API RESTful para manipulação de dados.
+Como Fazer: Usar Flask para criar rotas e métodos HTTP.
+Habilidades: Desenvolvimento de APIs, Flask.

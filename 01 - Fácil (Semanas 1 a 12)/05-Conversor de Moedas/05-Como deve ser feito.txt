@@ -1,0 +1,113 @@
+05 - Conversor de Moedas
+Objetivo do Projeto
+O objetivo desse projeto é criar uma ferramenta que converta uma quantia de dinheiro de uma moeda para outra (como de reais para dólares, euros, etc.), utilizando a taxa de câmbio atual. Este projeto permite aprender a integrar APIs externas para obter informações atualizadas, realizar cálculos com números flutuantes, e interagir com o usuário.
+
+Especificações do Projeto
+Funcionalidades:
+
+O programa deve solicitar ao usuário o valor a ser convertido e as moedas de origem e destino (ex.: de Reais para Dólares).
+O programa deve usar uma API para obter a taxa de câmbio atual entre as moedas selecionadas.
+O programa deve calcular o valor convertido e exibir o resultado de forma clara.
+O programa pode ser estendido para permitir conversões entre várias moedas.
+Entrada do Usuário:
+
+O usuário deve inserir o valor que deseja converter, a moeda de origem e a moeda de destino.
+Exemplo de entrada: "Quanto deseja converter?", "De qual moeda você deseja converter?", "Para qual moeda você deseja converter?"
+Saída:
+
+O programa deve exibir o valor convertido para a moeda de destino.
+Exemplo: "100 reais equivalem a 18 dólares (taxa de câmbio de 1 real = 0,18 dólares)."
+Estrutura do Projeto
+Obter a Taxa de Câmbio:
+
+O programa precisa de uma maneira de obter a taxa de câmbio atual entre as moedas. Para isso, você pode usar uma API pública como a ExchangeRate-API, ou outras APIs como a Fixer.io.
+A resposta da API geralmente retorna um JSON com as taxas de câmbio entre diferentes moedas.
+Solicitar os Dados do Usuário:
+
+O programa deve pedir ao usuário que informe:
+O valor a ser convertido.
+A moeda de origem (por exemplo, "BRL" para reais).
+A moeda de destino (por exemplo, "USD" para dólares).
+Realizar o Cálculo da Conversão:
+
+Usando a taxa de câmbio obtida, o programa deve calcular o valor convertido. A fórmula é simples:
+python
+
+valor_convertido = valor_original * taxa_de_câmbio
+Exibir o Resultado:
+
+O programa deve exibir o valor convertido ao usuário de forma clara, juntamente com a taxa de câmbio utilizada.
+Tratar Erros:
+
+O programa deve validar as entradas do usuário para garantir que sejam válidas. Além disso, deve verificar se a API retornou uma resposta válida.
+Caso o usuário insira moedas inválidas ou um valor numérico incorreto, o programa deve fornecer mensagens de erro apropriadas.
+Passos para Implementação
+Importar Bibliotecas e Configurar a API:
+
+Para realizar a requisição à API, você precisará da biblioteca requests, que pode ser instalada via pip install requests.
+Você também precisará de uma chave de API se estiver usando um serviço que exija autenticação.
+Solicitar os Dados do Usuário:
+
+Use o input() para pedir ao usuário o valor a ser convertido, a moeda de origem e a moeda de destino.
+Fazer a Requisição para a API:
+
+Faça uma requisição HTTP para a API para obter as taxas de câmbio. Por exemplo, com o requests.get() você pode buscar as informações de conversão.
+Exemplo de requisição:
+python
+
+import requests
+response = requests.get(f"https://api.exchangerate-api.com/v4/latest/{moeda_origem}")
+data = response.json()
+Extrair a Taxa de Câmbio:
+
+Depois de obter a resposta JSON da API, você pode extrair a taxa de câmbio entre as moedas de interesse.
+Exemplo:
+python
+
+taxa_cambio = data['rates'][moeda_destino]
+Calcular o Valor Convertido:
+
+Usando a taxa de câmbio, calcule o valor convertido.
+Exemplo:
+python
+
+valor_convertido = valor_original * taxa_cambio
+Exibir o Resultado para o Usuário:
+
+O programa deve mostrar o valor convertido para o usuário.
+Exemplo:
+python
+
+print(f"O valor de {valor_original} {moeda_origem} equivale a {valor_convertido:.2f} {moeda_destino}.")
+Tratar Erros:
+
+Caso a moeda não seja válida ou a API não responda corretamente, o programa deve informar o erro e pedir ao usuário para tentar novamente.
+Aprendizados e Conceitos Chave
+Trabalhando com APIs:
+
+Este projeto oferece uma introdução prática ao uso de APIs externas para obter dados em tempo real. Isso envolve fazer requisições HTTP e manipular respostas em formato JSON.
+Manipulação de Dados Numéricos:
+
+A conversão de valores envolve operações matemáticas simples, mas é importante garantir que os cálculos sejam feitos com precisão, especialmente com números decimais.
+Validação de Entrada:
+
+Ao lidar com entradas de usuário, o programa precisa validar se os dados inseridos estão corretos, como garantir que as moedas estejam em um formato válido e que o valor seja numérico.
+Uso de Strings para Representar Moedas:
+
+As moedas podem ser representadas por códigos de 3 letras (como "BRL" para real, "USD" para dólar, "EUR" para euro), e o programa precisa tratar essas representações de forma eficiente.
+Extensões e Melhorias
+Conversão entre Múltiplas Moedas:
+
+Em vez de pedir ao usuário para informar sempre as moedas de origem e destino, o programa pode permitir que o usuário converta de várias moedas para várias moedas (como um "conversor de moedas completo").
+Interface Gráfica:
+
+O programa pode ser melhorado com uma interface gráfica usando a biblioteca Tkinter, onde o usuário pode selecionar as moedas a partir de listas suspensas.
+Salvar Taxas de Câmbio para Uso Offline:
+
+O programa pode salvar as taxas de câmbio em um arquivo local para que o usuário possa usar o conversor offline, se necessário.
+Conversor de Moeda com Cálculos de Impostos ou Comissões:
+
+Para tornar o programa mais útil em cenários práticos, você pode adicionar funcionalidades como taxas de câmbio ajustadas para incluir impostos ou comissões sobre a conversão.
+Exibir Gráficos de Taxas de Câmbio:
+
+Usando bibliotecas como matplotlib, você pode criar gráficos para mostrar as flutuações das taxas de câmbio ao longo do tempo, fornecendo ao usuário uma visão mais completa sobre as mudanças de mercado.

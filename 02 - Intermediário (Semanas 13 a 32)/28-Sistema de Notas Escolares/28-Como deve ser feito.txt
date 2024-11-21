@@ -1,0 +1,5 @@
+Sistema de Notas Escolares
+
+Objetivo: Receber notas de alunos e calcular a média, maior e menor nota.
+Como Fazer: Usar listas para armazenar as notas e calcular a média.
+Habilidades: Manipulação de listas e cálculos simples.

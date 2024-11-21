@@ -1,0 +1,4 @@
+Gerador de Relatórios PDF
+Objetivo: Criar relatórios em formato PDF com dados formatados e gráficos.
+Como Fazer: Utilizar ReportLab para criar PDFs com seções e gráficos.
+Habilidades: Geração de PDF, formatação de dados.

@@ -1,0 +1,4 @@
+Análise de Dados de Redes Sociais
+Objetivo: Analisar dados de redes sociais, como tweets.
+Como Fazer: Usar Tweepy para coletar tweets e TextBlob para análise de sentimento.
+Habilidades: Web scraping, NLP.

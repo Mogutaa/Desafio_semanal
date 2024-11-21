@@ -1,0 +1,4 @@
+Agenda de Contatos
+Objetivo: Criar uma agenda de contatos que permita adicionar, editar, buscar e remover contatos.
+Como Fazer: Implementar um sistema de armazenamento (usando listas, dicionários ou um banco de dados) para gerenciar os contatos, com uma interface amigável para o usuário.
+Habilidades: Estrutura de dados, manipulação de listas e dicionários.

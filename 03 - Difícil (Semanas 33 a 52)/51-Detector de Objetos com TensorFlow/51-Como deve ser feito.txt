@@ -1,0 +1,4 @@
+Detector de Objetos com TensorFlow
+Objetivo: Criar um modelo de detecção de objetos em imagens.
+Como Fazer: Usar TensorFlow e redes neurais convolucionais (CNNs) para detecção.
+Habilidades: Deep learning, redes neurais.

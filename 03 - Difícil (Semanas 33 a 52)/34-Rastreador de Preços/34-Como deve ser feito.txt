@@ -1,0 +1,4 @@
+Rastreador de Preços
+Objetivo: Monitorar preços de produtos de um site e alertar sobre mudanças.
+Como Fazer: Usar requests e BeautifulSoup para scraping e smtplib para enviar alertas.
+Habilidades: Web scraping, automação de notificações.

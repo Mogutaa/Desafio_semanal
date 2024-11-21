@@ -1,0 +1,4 @@
+Análise Preditiva de Séries Temporais
+Objetivo: Criar um modelo para prever valores futuros com base em séries temporais.
+Como Fazer: Usar pandas e statsmodels para análise e previsão.
+Habilidades: Análise de séries temporais, previsão de dados.

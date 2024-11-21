@@ -1,0 +1,5 @@
+Simulador de Dados
+
+Objetivo: Simular o lançamento de um dado e registrar estatísticas.
+Como Fazer: Usar random para gerar números e contar os resultados.
+Habilidades: Aleatoriedade, contagem e visualização de dados.

@@ -1,0 +1,5 @@
+Encurtador de URLs
+
+Objetivo: Encurtar URLs longas.
+Como Fazer: Usar uma API de encurtamento de URLs, como o TinyURL.
+Habilidades: Uso de APIs externas e manipulação de strings.

@@ -1,0 +1,5 @@
+Calculadora de Juros Compostos
+
+Objetivo: Calcular o valor de um investimento com juros compostos.
+Como Fazer: Criar uma fórmula para calcular os juros compostos.
+Habilidades: Aritmética financeira e manipulação de entradas.

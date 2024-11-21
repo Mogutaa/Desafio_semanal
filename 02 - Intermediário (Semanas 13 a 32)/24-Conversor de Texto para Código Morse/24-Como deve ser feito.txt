@@ -1,0 +1,5 @@
+Conversor de Texto para Código Morse
+
+Objetivo: Converter texto em código morse.
+Como Fazer: Criar um dicionário que mapeia cada caractere para seu equivalente em código morse.
+Habilidades: Dicionários e manipulação de strings.
