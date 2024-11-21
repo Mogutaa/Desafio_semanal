@@ -9,11 +9,38 @@ def multiplicacao (a,b):
 
 def divisao (a,b):
     if b == 0:
-        "Não permitido divisão por zero"
-    return a/b
+        print("Não permitido divisão por zero")
+    else:
+        return a/b
 
+while True:
 
+    operacao = input("Digite a operacao desejada: +, -, *, /")
+    if operacao not in ["+","-","*","/"]:
+        print("Operação inválida")
+        continue
 
+    try:
+        num1 = float(input("Digite o primeiro numero: "))
+        num2 = float(input("Digite o segundo numero: "))
+    except ValueError:
+        print("Erro: Digite números válidos!")
+        continue
 
-num1 = float(input("Digite o primeiro numero: "))
-num2 = float(input("Digite o segundo numero: "))
+    if operacao == "+":
+        resultado = soma(num1,num2)
+    elif operacao == "-":
+        resultado = subtracao(num1,num2)
+    elif operacao == "*":
+        resultado = multiplicacao(num1,num2)
+    elif operacao == "/":
+        resultado = divisao(num1,num2)  
+    else:
+        print("Operação inválida")  
+
+    print("O resultado é: ", resultado)
+
+    continuar = input("Deseja continuar? (s/n): ").strip().lower()
+    if continuar == "n":
+        print("Encerrando a calculadora. Até mais!")
+        break
