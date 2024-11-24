@@ -16,7 +16,7 @@ def exibir_menu():
 #exibir submenus
 def exibir_submenu(conversoes):
     for chave, (descricao, _, unidade_entrada, unidade_saida) in conversoes.items():
-        print(f"{chave} - {descricao} ({unidade_entrada} -> {unidade_saida})")
+        print(f"{chave} - {descricao}")
 
 
 #realizar conversoes
