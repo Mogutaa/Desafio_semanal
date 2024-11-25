@@ -9,20 +9,22 @@ menus = {
     }
 
 #exibir menus
+print("=====Bem-vindo ao Calculadora==== \n")
 def exibir_menu():
+    print("=========Escolha um menu========= \n")
     for chave, valor in menus.items():
         print(f"{chave} - {valor[0]}")
 
 #exibir submenus
 def exibir_submenu(conversoes):
     for chave, (descricao, _, unidade_entrada, unidade_saida) in conversoes.items():
-        print(f"{chave} - {descricao}")
+        print(f"{chave} - {descricao} \n  ==============================")
 
 
 #realizar conversoes
 def realizar_conversoes(funcao_conversao,unidade_entrada,unidade_saida):
     try:
-        valor = float(input("Digite o valor a ser convertido: "))
+        valor = float(input("===Digite o valor a ser convertido: \n"))
         resultado = funcao_conversao(valor)
         print(f"{valor} {unidade_entrada} equivale a {resultado} {unidade_saida}")
     except ValueError:
@@ -40,7 +42,7 @@ def main():
     nome_menu = menu_selecionado[0]
     sub_menu = menu_selecionado[1]
 
-    print(f"Voce escolheu o menu {nome_menu}")
+    print(f"==Voce escolheu o menu: {nome_menu}== \n")
     exibir_submenu(sub_menu)
 
     opcao_conversao = input("Escolha uma opcao: ")
@@ -48,7 +50,7 @@ def main():
         print("Opcao invalida. Por favor, escolha uma opcao valida.")
         continue
     descricao, funcao_conversao, unidade_entrada, unidade_saida = sub_menu[opcao_conversao]
-    print(f"Voce escolheu a opcao {descricao}")
+    print(f"==Voce escolheu a opcao {descricao}== \n")
     realizar_conversoes(funcao_conversao,unidade_entrada,unidade_saida)
 
     continuar = input("Deseja realizar outra conversao? (S/N): ").lower()
@@ -60,4 +62,3 @@ if __name__ == "__main__":
     main()
     
         
-
